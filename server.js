@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 var path = require('path');
 
 // Configure express application
+// Set port to dynamic port or static at 3000
 var app = express();
 var PORT = process.env.PORT || 3000;
 

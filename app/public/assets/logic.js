@@ -1,6 +1,4 @@
-$(document).ready(function() {
-    $("select").material_select();
-
+$(document).ready(function () {
     $(".modal").modal({
         dismissible: false, // Modal can be dismissed by clicking outside of the modal
         opacity: .5, // Opacity of modal background
@@ -12,14 +10,13 @@ $(document).ready(function() {
 });
 
 // Activate submit button
-$("#submitBtn").on("click", function(event) {
+$("#submitBtn").on("click", function (event) {
     event.preventDefault();
-    console.log("yay")
     // Gather user inputs
     var userInput = {
         name: $("#name").val().trim(),
         photo: $("#image").val().trim(),
-        scores:[
+        scores: [
             $("#q1").val().trim(),
             $("#q2").val().trim(),
             $("#q3").val().trim(),
@@ -33,18 +30,15 @@ $("#submitBtn").on("click", function(event) {
         ]
     };
 
-    // console.log("userInput = " + JSON.stringify(userInput));
-
-    // Add user inputs to friends list
+    // Post user inputs to friends list
     $.post("/api/friends", userInput)
-      .done(function(data) {
-          // console.log("response = " + JSON.stringify(data));
+        .done(function (data) {
 
-          // Set the name and image values of friend match
-          $("#userMatch").html(data.matchName);
-        $("#userMatchImage").attr("src", data.matchImage);
+            // Set the name and image values of friend match
+            $("#userMatch").html(data.matchName);
+            $("#userMatchImage").attr("src", data.matchImage);
 
-        // Pop open the modal dialog
-          $("#modal1").modal("open");
-      });
+            // Pop open the modal dialog
+            $("#modal1").modal("open");
+        });
 });
