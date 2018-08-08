@@ -9,6 +9,8 @@ This full-stack site will take in results from different surveys, then compare a
 
 ![Alt Text](app/public/assets/images/demo.gif)
 
+Check out the app here: https://friend-finder-mvang92.herokuapp.com/
+
 ## Technologies Used
 
 * Javascript
