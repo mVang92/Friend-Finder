@@ -2,6 +2,21 @@
     border: 1px solid red;
 }*/
 
+body {
+    background: url("../assets/images/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.jumbotron{
+    background: rgba(235, 235, 235, 0.9);
+    border: 1px solid black;
+    box-shadow: 1px 1px 30px rgba(200, 200, 200, 0.7);
+}
+
+footer {
+    background: lightgrey;
+}
+
 #userMatchImage {
     display: block;
     margin: auto;
