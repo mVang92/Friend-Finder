@@ -14,7 +14,7 @@
   "author": "Meng Vang",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3",
+    "express": "^4.18.2",
     "path": "^0.12.7"
   }
 }
